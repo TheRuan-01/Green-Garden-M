@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="ui.LoginActivity">
+
+    <ImageView
+
+        android:id="@+id/ImageIcon"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="84dp"
+        android:src="@drawable/icon_account_circle_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+         />
+
+    <EditText
+        android:id="@+id/txtSenha"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Senha:"
+        android:inputType="textPassword"
+        android:padding="18dp"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtUsuario" />
+
+    <EditText
+        android:id="@+id/txtUsuario"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Usuário:"
+        android:inputType="text"
+        android:padding="18dp"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ImageIcon" />
+
+    <Button
+        android:id="@+id/bnt_login"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:backgroundTint="#EF5925"
+        android:fontFamily="sans-serif"
+        android:text="Logar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSenha" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="500dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageGG"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/gg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/bntCadastrar"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#0AC3A7"
+        android:text="Cadastrar-se"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bnt_login" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
