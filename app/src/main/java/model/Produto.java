@@ -3,6 +3,7 @@ package model;
 import java.io.Serializable;
 
 public class Produto implements Serializable {
+
     public int  imgProduto;
     public String nomeProduto;
     public String descricaoProduto;
