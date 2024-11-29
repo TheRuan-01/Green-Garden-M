@@ -1,0 +1,6 @@
+@GreenGardenAPI_HostAddress = http://localhost:5160
+
+GET {{GreenGardenAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
