@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <!-- Imagem do produto -->
+        <ImageView
+            android:id="@+id/imgProduto"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/person"
+            android:contentDescription="Imagem do Produto" />
+
+        <!-- Nome do produto -->
+        <TextView
+            android:id="@+id/txtNomeProduto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome do Produto"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:textColor="#000000" />
+
+        <!-- Preço do produto -->
+        <TextView
+            android:id="@+id/txtPrecoProduto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="R$ 99,99"
+            android:textSize="18sp"
+            android:textColor="#FF5722"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center" />
+
+        <!-- Botão Comprar -->
+        <Button
+            android:id="@+id/btnComprar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Comprar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF5722"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -2,16 +2,38 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenGarden"
         tools:targetApi="31">
+        <activity
+            android:name="ui.PedidoActivity"
+            android:exported="false" />
+        <activity
+            android:name="ui.DeletarActivity"
+            android:exported="false" />
+        <activity
+            android:name="ui.AtualizarActivity"
+            android:exported="false" />
+        <activity
+            android:name="ui.UsuarioActivity"
+            android:exported="false" />
+        <activity
+            android:name="ui.CarrinhoActivity"
+            android:exported="false" />
+        <activity
+            android:name="ui.ProdutoActivity"
+            android:exported="false" />
         <activity
             android:name="ui.ListarProdutosActivity"
             android:exported="false" />
@@ -19,7 +41,7 @@
             android:name="ui.VendaActivity"
             android:exported="false" />
         <activity
-            android:name="ui.LoginActivity"
+            android:name="ui.RegistroActivity"
             android:exported="false" />
         <activity
             android:name="ui.DetalheClienteActivity"

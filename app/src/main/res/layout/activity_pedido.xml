@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/resumoCompraLayout"
+    tools:context="ui.ResumoCompraActivity">
+
+    <!-- Título da tela -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarResumoCompra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF5722"
+        android:elevation="4dp"
+        app:title="Resumo da Compra"
+        app:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- RecyclerView para o resumo dos itens no carrinho -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewResumoCarrinho"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/paymentLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarResumoCompra" />
+
+    <!-- Total e Métodos de Pagamento -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/paymentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewResumoCarrinho"
+        app:layout_constraintBottom_toTopOf="@id/navigationBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Texto: Endereço -->
+        <TextView
+            android:id="@+id/enderecoTextoResumo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecione o Endereço:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Spinner: Seleção de Endereço -->
+        <Spinner
+            android:id="@+id/spinnerEndereco"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enderecoTextoResumo" />
+
+        <!-- Texto: Total -->
+        <TextView
+            android:id="@+id/totalTextoResumo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinnerEndereco" />
+
+        <!-- Valor Total -->
+        <TextView
+            android:id="@+id/totalValorResumo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 0,00"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/totalTextoResumo" />
+
+        <!-- Métodos de pagamento -->
+        <Spinner
+            android:id="@+id/spinnerMetodoPagamento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalValorResumo" />
+
+        <!-- Botão de Finalizar Compra -->
+        <Button
+            android:id="@+id/botaoFinalizarCompraResumo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF5722"
+            android:text="Finalizar Compra"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinnerMetodoPagamento" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Barra de Navegação com 3 ícones -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Ícone Home -->
+        <ImageView
+            android:id="@+id/iconHome"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="32dp"
+            android:contentDescription="Home"
+            android:src="@drawable/home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Ícone Carrinho -->
+        <ImageView
+            android:id="@+id/iconCarrinho"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="Carrinho"
+            android:src="@drawable/cart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iconPerfil"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/iconHome"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Ícone Perfil -->
+        <ImageView
+            android:id="@+id/iconPerfil"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="32dp"
+            android:contentDescription="Perfil"
+            android:src="@drawable/person"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

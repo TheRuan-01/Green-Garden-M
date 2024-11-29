@@ -1,52 +1,63 @@
 package model;
 
+
 import java.io.Serializable;
 
 public class Produto implements Serializable {
+    private int idProduto;
+    private String nome;
+    private double preco;
+    private String descricao;
+    private String imagem;
 
-    public int  imgProduto;
-    public String nomeProduto;
-    public String descricaoProduto;
-    public String preco;
-
-    public Produto (int imgProduto, String nomeProduto, String descricaoProduto, String preco){
-
-        this.imgProduto = imgProduto;
-        this.nomeProduto = nomeProduto;
-        this.descricaoProduto = descricaoProduto;
+    public Produto(int idProduto, String nome, double preco, String descricao, String imagem) {
+        this.idProduto = idProduto;
+        this.nome = nome;
         this.preco = preco;
-
+        this.descricao = descricao;
+        this.imagem = imagem;
     }
 
-    public int getImgProduto() {
-        return imgProduto;
+    public Produto() {
     }
 
-    public void setImgProduto(int imgProduto) {
-        this.imgProduto = imgProduto;
+    public int getIdProduto() {
+        return idProduto;
     }
 
-    public String getNomeProduto() {
-        return nomeProduto;
+    public void setIdProduto(int idProduto) {
+        this.idProduto = idProduto;
     }
 
-    public void setNomeProduto(String nomeProduto) {
-        this.nomeProduto = nomeProduto;
+    public String getNome() {
+        return nome;
     }
 
-    public String getDescricaoProduto() {
-        return descricaoProduto;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public void setDescricaoProduto(String descricaoProduto) {
-        this.descricaoProduto = descricaoProduto;
-    }
-
-    public String getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco(String preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 }

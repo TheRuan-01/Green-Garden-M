@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context="ui.LoginActivity">
+    tools:context="ui.RegistroActivity">
 
     <ImageView
 
@@ -89,7 +89,7 @@
         />
 
     <Button
-        android:id="@+id/bntCadastrar"
+        android:id="@+id/bnt_registro"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

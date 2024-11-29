@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/white"
+    android:padding="8dp">
+
+    <!-- Imagem do produto -->
+    <ImageView
+        android:id="@+id/itemImagem"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Nome do produto -->
+    <TextView
+        android:id="@+id/itemNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Nome do Produto"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/itemImagem"
+        app:layout_constraintEnd_toStartOf="@id/itemPreco"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Preço -->
+    <TextView
+        android:id="@+id/itemPreco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 0,00"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Botão de diminuir quantidade -->
+    <ImageButton
+        android:id="@+id/btnDiminuir"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/delete2"
+        android:textSize="18sp"
+        android:background="@color/white"
+        app:layout_constraintStart_toEndOf="@id/itemImagem"
+        app:layout_constraintTop_toBottomOf="@id/itemNome"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Quantidade -->
+    <TextView
+        android:id="@+id/tvQuantidade"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/btnDiminuir"
+        app:layout_constraintTop_toBottomOf="@id/itemNome"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Botão de adicionar quantidade -->
+    <ImageButton
+        android:id="@+id/btnAdicionar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:text="+"
+        android:textColor="@color/white"
+        android:src="@drawable/add"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/tvQuantidade"
+        app:layout_constraintTop_toBottomOf="@id/itemNome"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Botão de remover item -->
+    <ImageButton
+        android:id="@+id/btnRemover"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="@null"
+        android:contentDescription="Remover item"
+        android:scaleType="centerInside"
+        android:src="@drawable/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
